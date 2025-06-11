@@ -1,95 +1,102 @@
+"use client";
+
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const [showSignup, setShowSignup] = useState(false);
+  const formRef = useRef<HTMLDivElement>(null);
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+  function toggle() {
+    setShowSignup(!showSignup);
+  }
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      const x = e.clientX;
+      const y = e.clientY;
+      
+      // Update cursor position
+      document.documentElement.style.setProperty('--cursor-x', `${x}px`);
+      document.documentElement.style.setProperty('--cursor-y', `${y}px`);
+
+      if (formRef.current) {
+        const formRect = formRef.current.getBoundingClientRect();
+        const elementCenterX = formRect.left + formRect.width / 2;
+        const elementCenterY = formRect.top + formRect.height / 2;
+        
+        // Calculate direction from cursor to element center (inverse for shadow)
+        const dirX = (elementCenterX - x) / window.innerWidth;
+        const dirY = (elementCenterY - y) / window.innerHeight;
+        
+        // Calculate distance for intensity
+        const distance = Math.sqrt(
+          Math.pow(x - elementCenterX, 2) + 
+          Math.pow(y - elementCenterY, 2)
+        );
+        const intensity = Math.min(1, 300 / distance);
+        
+        document.documentElement.style.setProperty('--shadow-x', `${dirX * 30}`);
+        document.documentElement.style.setProperty('--shadow-y', `${dirY * 30}`);
+        document.documentElement.style.setProperty('--shadow-intensity', `${intensity}`);
+      }
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
+  return (
+    <main className={styles.main}>
+      <div className={styles.form} ref={formRef}>
+        {!showSignup && (
+          <div className={styles.container}>
+            <h1>Log-In</h1>
+            <input type="text" placeholder="Username" />
+            <input type="password" placeholder="Password" />
+            <button>Log In</button>
+            <a onClick={toggle}>Don't have an account? Sign up</a>
+          </div>
+        )}
+        {showSignup && (
+          <div className={styles.container}>
+            <h1>Sign-up</h1>
+            <input type="text" placeholder="Firstname"/>
+            <input type="text" placeholder="Middlename" />
+            <input type="text" placeholder="Lastname" />
+            <div className={styles.radioGroup}>
+              <label>
+                <input type="radio" name="gender" value="male" />
+                Male
+              </label>
+              <label>
+                <input type="radio" name="gender" value="female" />
+                Female
+              </label>
+              <label>
+                <input type="radio" name="gender" value="other" />
+                Other
+              </label>
+            </div>
+            <input type="email" placeholder="Email" />
+            <input type="text" placeholder="Phone Number" />
+            <input type="text" placeholder="Username" />
+            <input type="password" placeholder="Password" />
+            <input type="password" placeholder="Confirm Password" />
+            <button onClick={toggle}>Sign Up</button>
+          </div>
+        )}
+      </div>
+      <div className={styles.overlay} />
+      <div className={styles.background}>
+        <Image
+          src="/background.jpg"
+          alt="Background Image"
+          fill
+          style={{ objectFit: "cover" }}
+        />
+      </div>
+    </main>
   );
 }
