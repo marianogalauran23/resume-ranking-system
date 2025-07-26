@@ -29,7 +29,7 @@ const firstinterview: React.FC = () => {
         <div className={Styles.searchBar}>
             <Image src={Search} alt="Search Icon" className={Styles.SearchIcon}/>
             <input type="text" placeholder="Search..." className={Styles.SearchInput}/>
-            <Image src={Profile} alt="Profile" className={Styles.SearchIcon}/>
+            <Image src={Profile} alt="Profile" className={Styles.Profile}/>
         </div>
         <div className={Styles.overViews}>
             <div className={Styles.gridOverview}>

@@ -74,11 +74,16 @@
     justify-content: space-between;
     flex-grow: 8;
     padding: 20px;
+    gap: 40px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
 }
 
+
+/* Search Bar Part */
 .searchBar {
     width: 80%;
-    height: 60px;
+    min-height: 60px;
     background-color: #ffffff;
     border: 1px black;
     border-radius: 50px;
@@ -88,6 +93,8 @@
     gap: 20px;
     padding: 0 20px;
     box-shadow: 14px 14px 14px rgba(0, 0, 0, 0.404);
+    position: relative;
+    overflow: hidden;
 }
 
 .SearchIcon {
@@ -109,6 +116,77 @@
     outline: none;
     background-color: transparent;
     color: #000000;
-    font-size: 24px;
+    font-size: 20px;
     padding: 10px;
+}
+
+
+
+/* Overview Card Part */
+.overViews {
+    width: 80%;
+    min-height: 400px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.gridOverview {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    width: 80%;
+    margin: 10px;
+    gap: 20px;
+}
+
+.overviewItem {
+    width: 300px;
+    height: 180px;
+    background-color: #ffffff;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    color: green;
+    font-size: 20px;
+    box-shadow: 14px 14px 14px rgba(0, 0, 0, 0.404);
+}
+
+.SoloOverview {
+    width: 300px;
+    height: 360px;
+    background: linear-gradient(184deg,rgb(175, 168, 236) 0%, rgb(14, 1, 70) 58%);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    color: green;
+    font-size: 20px;
+    box-shadow: 14px 14px 14px rgba(0, 0, 0, 0.404);
+}
+
+.Table {
+    width: 80%;
+    min-height: 700px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 14px 14px 14px rgba(0, 0, 0, 0.404);
+    color: green;
+    font-size: 50px;
 }
