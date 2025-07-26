@@ -1,6 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
 import Styles from "./dashboard.module.css";
+import Home from "./Images/home.png";
+import List from "./Images/list.png";
+import Notificaation from "./Images/notification.png";
+import Return from "./Images/return.png";
+import Search from "./Images/search.png";
+import Profile from "./Images/profile.png";
 
 const firstinterview: React.FC = () => {
     return (
@@ -8,19 +14,49 @@ const firstinterview: React.FC = () => {
         <div className={Styles.leftFrame}>
         <div className={Styles.Sidebar}>
             <div className={Styles.Top}>
-                <Image src={} alt="Home"/>
-                <Image src={} alt="List"/>
+                <Image className={Styles.SidebarButtons} src={Home} alt="Home"/>
+                <Image className={Styles.SidebarButtons} src={List} alt="List"/>
             </div>
 
             <div className={Styles.Bottom}>
-                <Image src={} alt="Notification"/>
-                <Image src={} alt="Return"/>
+                <Image className={Styles.SidebarButtons} src={Notificaation} alt="Notification"/>
+                <Image className={Styles.SidebarButtons} src={Return} alt="Return"/>
             </div>
         </div>
        </div>
 
        <div className={Styles.rightFrame}>
-        
+        <div className={Styles.searchBar}>
+            <Image src={Search} alt="Search Icon" className={Styles.SearchIcon}/>
+            <input type="text" placeholder="Search..." className={Styles.SearchInput}/>
+            <Image src={Profile} alt="Profile" className={Styles.SearchIcon}/>
+        </div>
+        <div className={Styles.overViews}>
+            <div className={Styles.gridOverview}>
+                <div className={Styles.overviewItem}>
+                    <h1 className={Styles.overviewTitle}>Container 1 Bitch</h1>
+                </div>
+
+                <div className={Styles.overviewItem}>
+                    <h1 className={Styles.overviewTitle}>Container 2 Bitch</h1>
+                </div>
+
+                <div className={Styles.overviewItem}>
+                    <h1 className={Styles.overviewTitle}>Container 3 Bitch</h1>
+                </div>
+
+                <div className={Styles.overviewItem}>
+                    <h1 className={Styles.overviewTitle}>container 4 Bitch</h1>
+                </div>
+            </div>
+
+            <div className={Styles.SoloOverview}>
+                <h3 className={Styles.overviewTitle}>This is Solo Bitch</h3>
+            </div>
+        </div>
+        <div className={Styles.Table}>
+            <h3 className={Styles.overviewTitle}>This is a Table Bitch</h3>
+        </div>
        </div>
        </div>
     );

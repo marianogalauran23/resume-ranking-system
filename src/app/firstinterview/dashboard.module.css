@@ -1,0 +1,114 @@
+/* Body itestra*/
+.FullFrame {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Left Frames Content Lang to*/
+.leftFrame {
+    height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.Sidebar {
+    width: 50%;
+    height: 80%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: #e6b5b5;
+    background: linear-gradient(184deg,rgba(230, 181, 181, 1) 0%, rgba(171, 0, 0, 1) 58%);    border: 2px solid;
+    border-radius: 50px;
+    box-shadow: 15px 15px 15px rgba(131, 10, 10, 0.445);
+}
+
+.Top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0px;
+    gap: 10px;
+}
+
+.Bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    bottom: 0px;
+    gap: 10px;
+}
+
+.SidebarButtons {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.SidebarButtons:hover {
+    transform: scale(1.4);
+    opacity: 0.8;
+}
+
+
+/* Right Frame Contents to */
+.rightFrame {
+    height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 8;
+    padding: 20px;
+}
+
+.searchBar {
+    width: 80%;
+    height: 60px;
+    background-color: #ffffff;
+    border: 1px black;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 20px;
+    box-shadow: 14px 14px 14px rgba(0, 0, 0, 0.404);
+}
+
+.SearchIcon {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.SearchIcon:hover {
+    transform: scale(1.3);
+    opacity: 0.8;
+}
+
+.SearchInput {
+    width: 92%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #000000;
+    font-size: 24px;
+    padding: 10px;
+}
