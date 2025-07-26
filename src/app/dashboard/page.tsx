@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import Styles from "./dashboard.module.css";
+import Styles from "./firstinterv.module.css";
 import Cat from "./Images/Welcome.gif";
 import Mic from "./Images/Mic.png";
 
