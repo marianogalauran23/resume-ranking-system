@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import Image from 'next/image';
 import Styles from "./firstinterv.module.css";
 import Cat from "./Images/Welcome.gif";
@@ -22,6 +23,18 @@ const Dashboard: React.FC = () => {
             </div>
         </div>
     </div>
+=======
+
+const Dashboard: React.FC = () => {
+    return (
+       <div>
+            <div>
+                <div>
+                    <h1>Dashboard</h1>
+                </div>
+            </div>
+       </div>
+>>>>>>> f530064be3827b842f0f334844fcdd79efe20a98
     );
 };
 

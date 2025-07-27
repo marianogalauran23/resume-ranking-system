@@ -9,17 +9,30 @@
     "lint": "next lint"
   },
   "dependencies": {
+<<<<<<< HEAD
     "next": "^15.4.4",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+=======
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "next": "15.3.3"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+>>>>>>> f530064be3827b842f0f334844fcdd79efe20a98
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.3.3",
+<<<<<<< HEAD
     "typescript": "^5"
+=======
+    "@eslint/eslintrc": "^3"
+>>>>>>> f530064be3827b842f0f334844fcdd79efe20a98
   }
 }
