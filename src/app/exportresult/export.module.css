@@ -1,0 +1,249 @@
+.FullFrame {
+    height: 100vh;
+    background: rgba(141, 138, 138, 0.185);
+    color: rgb(0, 0, 0);
+    width: 100vw;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.exportContainer {
+    width: 60%;
+    height: 90%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid gray;
+    box-shadow: 14px 14px 14px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.Header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(255, 156, 156);
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-bottom: 1px solid black;
+    flex: 1;
+}
+
+.Title {
+    font-family: 'Arial Black', Gadget, sans-serif;
+    letter-spacing: 2px;
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+.Contents {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+    background-color: brown;
+    flex: 7;
+    overflow: hidden;
+}
+
+.Left {
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    overflow-y: auto;
+}
+
+.Left::-webkit-scrollbar {
+    display: none;
+}
+
+.Top {
+    background-color: none;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px;
+}
+
+.Bottom {
+    background-color: none;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 10px;
+}
+
+.ReportFormat {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.Buttons {
+    margin-left: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.ButtonBG {
+    height: 45px;
+    width: 100px;
+    background-color: rgb(255, 187, 187);
+    border: 1px solid rgb(255, 175, 175);
+    border-radius: 20px;
+    color: black;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.486);
+    transition: ease 0.3s;
+}
+
+.ButtonNBG {
+    height: 45px;
+    width: 100px;
+    background-color: white;
+    border: 1px solid rgb(255, 174, 174);
+    border-radius: 20px;
+    color: black;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.349);
+    transition: ease 0.3s;
+}
+
+.ButtonNBG:hover,
+.ButtonBG:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+.DetailGridList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.Name {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.FormatDescription {
+    margin-right: 8px;
+    font-size: 14px;
+    margin-top: 7px;
+}
+
+.FormatName {
+    font-size: 15px;
+    font-family: 'Arial Black', Gadget, sans-serif;
+    letter-spacing: 2px;
+}
+
+.FormatOptions {
+    border: 2px solid rgb(253, 209, 209);
+    border-radius: 15px;
+    width: 95%;
+    height: 80px;
+    padding: 10px;
+    cursor: pointer;
+    transition: ease 0.3s;
+}
+
+.FormatOptions:hover {
+    transform: scale(1.1);
+    background-color: rgba(247, 113, 113, 0.575);
+}
+
+.FormatOption:active {
+    background-color: rgba(255, 0, 0, 0.486);
+    border: 1px solid rgb(247, 46, 46);
+}
+
+.Right {
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    overflow-y: auto;
+}
+
+.Right::-webkit-scrollbar {
+    display: none;
+}
+
+.Summary, .CandidateScores {
+    border-radius: 20px;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.329);
+    padding: 20px;
+}
+
+.Footer {
+    width: 100%;
+    flex: 1;
+    background-color: rgb(255, 156, 156);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 0 30px;
+}
+
+.FooterName {
+    font-size: 15px;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    font-weight: normal;
+}
+
+.Printing {
+    margin-right: 10px;
+}
+
+.ExportName {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.ExportNaminger {
+    font-size: 17px;
+    line-height: 25px;
+    width: 200px;
+    background-color: white;
+    border-color: 1px solid black;
+    border-radius: 5px;
+    color: black;
+    padding-left: 5px;
+}

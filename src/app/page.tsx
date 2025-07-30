@@ -56,11 +56,7 @@ export default function Home() {
             <input type="text" placeholder="Username" />
             <input type="password" placeholder="Password" />
             <button>Log In</button>
-<<<<<<< HEAD
             <a onClick={toggle}>Dont have an account? Sign up</a>
-=======
-            <a onClick={toggle}>Don't have an account? Sign up</a>
->>>>>>> f530064be3827b842f0f334844fcdd79efe20a98
           </div>
         )}
         {showSignup && (

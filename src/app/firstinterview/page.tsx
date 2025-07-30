@@ -34,28 +34,28 @@ const firstinterview: React.FC = () => {
         <div className={Styles.overViews}>
             <div className={Styles.gridOverview}>
                 <div className={Styles.overviewItem}>
-                    <h1 className={Styles.overviewTitle}>Container 1 Bitch</h1>
+                    <h1 className={Styles.overviewTitle}>CONTAINER 1</h1>
                 </div>
 
                 <div className={Styles.overviewItem}>
-                    <h1 className={Styles.overviewTitle}>Container 2 Bitch</h1>
+                    <h1 className={Styles.overviewTitle}>CONTAINER 2</h1>
                 </div>
 
                 <div className={Styles.overviewItem}>
-                    <h1 className={Styles.overviewTitle}>Container 3 Bitch</h1>
+                    <h1 className={Styles.overviewTitle}>CONTAINER 3</h1>
                 </div>
 
                 <div className={Styles.overviewItem}>
-                    <h1 className={Styles.overviewTitle}>container 4 Bitch</h1>
+                    <h1 className={Styles.overviewTitle}>CONTAINER 4</h1>
                 </div>
             </div>
 
             <div className={Styles.SoloOverview}>
-                <h3 className={Styles.overviewTitle}>This is Solo Bitch</h3>
+                <h3 className={Styles.overviewTitle}>THIS IS <br></br>A SOLO</h3>
             </div>
         </div>
         <div className={Styles.Table}>
-            <h3 className={Styles.overviewTitle}>This is a Table Bitch</h3>
+            <h3 className={Styles.overviewTitle}>THIS IS A TABLE</h3>
         </div>
        </div>
        </div>
